@@ -1,0 +1,98 @@
+:root {
+  --grey-900: hsl(0, 0%, 8%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-700: hsl(0, 0%, 20%);
+  --green-color: hsl(75, 94%, 57%);
+  --main-radius: 0.75rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/Inter-VariableFont_slnt\,wght.ttf) format(truetype);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--grey-900);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  background-color: var(--grey-800);
+  width: clamp(20.438rem, 21.75rem, 21.75rem);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--main-radius);
+  padding: 2.5rem;
+}
+
+.card img {
+  max-width: 5.5rem;
+  max-height: 5.5rem;
+  border-radius: 62.438rem;
+  margin-bottom: 1.5rem;
+}
+
+.card .info .name {
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.card .info .location {
+  text-align: center;
+  font-weight: bold;
+  color: var(--green-color);
+  line-height: 0.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.card .info .role {
+  text-align: center;
+  font-weight: normal;
+  line-height: 0.25rem;
+  font-size: 0.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.card .links {
+  display: flex;
+  flex-direction: column;
+  width: clamp(17.4375rem, 19rem, 19rem);
+  gap: 1rem;
+}
+
+.card .links button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--grey-700);
+  font-size: 0.875rem;
+  font-weight: bold;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.card .links button:hover {
+  background-color: var(--green-color);
+  color: var(--grey-700);
+}
+

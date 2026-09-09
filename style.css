@@ -24,8 +24,20 @@ h1 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card {

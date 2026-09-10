@@ -29,7 +29,8 @@ body {
 
 .card {
   background-color: var(--grey-800);
-  width: clamp(20.438rem, 21.75rem, 21.75rem);
+  width: 100%;
+  max-width: 21.75rem;
   color: white;
   display: flex;
   flex-direction: column;
@@ -57,7 +58,7 @@ body {
   text-align: center;
   font-weight: bold;
   color: var(--green-color);
-  line-height: 0.25rem;
+  line-height: 1.5;
   font-size: 0.875rem;
   margin-bottom: 2.5rem;
 }
@@ -73,11 +74,12 @@ body {
 .card .links {
   display: flex;
   flex-direction: column;
-  width: clamp(17.4375rem, 19rem, 19rem);
+  width: 100%;
+  max-width: 19rem;
   gap: 1rem;
 }
 
-.card .links button {
+.card .links a {
   all: unset;
   cursor: pointer;
   text-align: center;
@@ -91,8 +93,12 @@ body {
     color 0.2s ease;
 }
 
-.card .links button:hover {
+.card .links a:hover {
   background-color: var(--green-color);
   color: var(--grey-700);
 }
 
+.card .links a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}

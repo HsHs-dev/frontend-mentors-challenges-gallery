@@ -1,0 +1,253 @@
+/* General Rules */
+
+:root {
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --white: hsl(0, 0%, 100%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+  --brown-800: hsl(14, 45%, 36%);
+  --sections-margin: 2rem;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Outfit";
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--stone-100);
+}
+
+main {
+  padding-block: 8rem;
+  padding-inline: clamp(1.5rem, 5vw, 22rem);
+}
+
+/* Card Styling */
+
+.recipe-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--white);
+  width: 100%;
+  max-width: 46rem;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+}
+
+.recipe-card img {
+  max-width: 41rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.recipe-card .title {
+  margin-bottom: var(--sections-margin);
+}
+
+.recipe-card .title .name {
+  font-family: "YoungSerif";
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--stone-900);
+  margin-bottom: 1.5rem;
+}
+
+.recipe-card .title .description {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--stone-600);
+}
+
+.heading {
+  font-family: "YoungSerif";
+  font-size: 1.75rem;
+  line-height: 1;
+  font-weight: normal;
+  color: var(--brown-800);
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list li {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--stone-600);
+  list-style-position: inside;
+}
+
+.recipe-card hr {
+  border: none;
+  height: 1px;
+  background-color: var(--stone-150);
+  width: 100%;
+  margin-top: var(--sections-margin);
+  margin-bottom: var(--sections-margin);
+}
+
+.recipe-card li span {
+  font-weight: bold;
+}
+
+/* Preparation Section */
+
+.recipe-card .preparation {
+  padding-left: 1.5rem;
+  margin-bottom: var(--sections-margin);
+  background-color: var(--rose-50);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.recipe-card .preparation h2 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--rose-800);
+  margin-bottom: 1rem;
+}
+
+.recipe-card .preparation ul {
+  margin-left: 0.5rem;
+}
+
+.recipe-card .preparation li::marker {
+  color: var(--rose-800);
+}
+
+/* Ingerdients Section */
+
+.recipe-card .ingredients li::marker {
+  color: var(--brown-800);
+}
+
+.recipe-card .ingredients li {
+  padding-left: 0.5rem;
+}
+
+/* Instructions Section */
+
+.recipe-card .instructions li::marker {
+  color: var(--brown-800);
+  font-weight: bold;
+}
+
+.recipe-card .instructions ol {
+  margin-left: 1rem;
+}
+
+.recipe-card .instructions li {
+  list-style-position: outside;
+  padding-left: 1rem;
+}
+
+/* Nutrition Section */
+
+.recipe-card .nutrition .description {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--stone-600);
+  margin-bottom: 1.5rem;
+}
+
+.recipe-card .nutrition table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.recipe-card .nutrition table th,
+.recipe-card .nutrition table td {
+  padding: 0;
+  border: 0;
+  text-align: left;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.recipe-card .nutrition table th {
+  padding-left: 2rem;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--stone-600);
+  max-width: 18rem;
+}
+
+.recipe-card .nutrition table tr:not(:last-child) {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+.recipe-card .nutrition table td {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--brown-800);
+  padding-right: 2rem;
+  max-width: 18rem;
+}
+
+/* Media */
+
+/* Mobile: 440px and below */
+@media (max-width: 27.5rem) {
+  main {
+    padding: 0;
+  }
+
+  .recipe-card img {
+    border-radius: 0;
+  }
+
+  .recipe-card {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .recipe-card>*:not(img) {
+    padding-inline: 2rem;
+  }
+
+  .recipe-card .title .name {
+    font-size: 2rem;
+  }
+
+  .recipe-card .nutrition {
+    padding-bottom: 2.5rem;
+  }
+}

@@ -81,11 +81,13 @@ body {
   font-family: "Fraunces", serif;
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1;
 }
 
 .description {
   font-size: 0.875rem;
   font-weight: 500;
+  line-height: 1.6;
   color: var(--grey);
 }
 
@@ -102,12 +104,14 @@ body {
   font-family: "Fraunces";
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1;
   color: var(--green-500);
 }
 
 .old-price {
   font-size: 0.813rem;
   font-weight: 500;
+  line-height: 1.2;
   color: var(--grey);
 }
 

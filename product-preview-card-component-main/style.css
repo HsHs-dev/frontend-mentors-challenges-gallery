@@ -1,0 +1,156 @@
+/* General Rules */
+
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Card General Styling */
+
+
+.card {
+  width: 100%;
+  max-width: 37.5rem;
+  display: flex;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+}
+
+/* Image Styling */
+
+.card picture {
+  display: block;
+  flex: 0 0 18.75rem;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+/* Content Styling */
+
+.content {
+  flex: 1;
+  min-width: 0;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.313rem;
+}
+
+.main-title {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+/* Price Tag Styling */
+
+.price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.current-price {
+  font-family: "Fraunces";
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-500);
+}
+
+.old-price {
+  font-size: 0.813rem;
+  font-weight: 500;
+  color: var(--grey);
+}
+
+/* "Add To Cart" button Styling */
+
+.card button {
+  all: unset;
+  cursor: pointer;
+  background-color: var(--green-500);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 1rem 3.976rem;
+  font-size: 0.875rem;
+  line-height: 1.1;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 300ms ease-in-out;
+}
+
+.card button:focus {
+  outline: 2px solid black;
+}
+
+.card button:hover {
+  background-color: var(--green-700);
+}
+
+/* Media Queires */
+
+/* 440px and below */
+@media (max-width: 27.5rem) {
+  .card {
+    flex-direction: column;
+  }
+
+  .card picture {
+    flex: 1 1 auto;
+  }
+
+  .card img {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+}

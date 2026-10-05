@@ -1,74 +1,170 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Gallery Meta Tags -->
-
-    <!-- Search / browser -->
+    <!-- Basic SEO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor Challenges Gallery</title>
+
     <meta
       name="description"
-      content="A gallery of my completed Frontend Mentor challenges."
+      content="A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript."
     />
+
+    <meta name="author" content="Hassan" />
+
     <link
       rel="canonical"
       href="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/"
     />
-    <!-- Open Graph — Facebook, LinkedIn, Discord, WhatsApp, Slack, etc. -->
+
+    <!-- Crawling / indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Google Search Console -->
+    <meta
+      name="google-site-verification"
+      content="WT-BVpRYOQl_eDLcgLP6bUjwNSveT-SWrjxGq2roWMA"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Frontend Mentor Challenges Gallery" />
+
     <meta
       property="og:description"
-      content="A gallery of my completed Frontend Mentor challenges."
+      content="A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript."
     />
+
     <meta property="og:type" content="website" />
+
     <meta
       property="og:url"
       content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/"
     />
+
     <meta
       property="og:site_name"
       content="Frontend Mentor Challenges Gallery"
     />
+
     <meta property="og:locale" content="en_US" />
-    <!-- Open Graph image -->
+
     <meta
       property="og:image"
       content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png"
     />
-    <meta
-      property="og:image:url"
-      content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png"
-    />
+
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+
     <meta
       property="og:image:alt"
       content="Frontend Mentor Challenges Gallery"
     />
+
     <!-- X -->
     <meta name="twitter:card" content="summary_large_image" />
+
     <meta name="twitter:title" content="Frontend Mentor Challenges Gallery" />
+
     <meta
       name="twitter:description"
-      content="A gallery of my completed Frontend Mentor challenges."
+      content="A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript."
     />
+
     <meta
       name="twitter:image"
       content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png"
     />
+
     <meta
       name="twitter:image:alt"
       content="Frontend Mentor Challenges Gallery"
     />
 
-    <title>Frontend Mentor Challenges</title>
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/#website",
+            "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/",
+            "name": "Frontend Mentor Challenges Gallery",
+            "description": "A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript.",
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/#collection",
+            "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/",
+            "name": "Frontend Mentor Challenges Gallery",
+            "description": "A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript.",
+            "isPartOf": {
+              "@id": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/#website"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png",
+              "width": 1200,
+              "height": 630
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "numberOfItems": 6,
+              "itemListOrder": "https://schema.org/ItemListOrderAscending",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "QR Code Component",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/qr-code-component/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Blog Preview Card",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/blog-preview-card/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Social Links Profile",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/social-links-profile-main/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Recipe Page",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/recipe-page-main/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "name": "Product Preview Card Component",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/product-preview-card-component-main/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "name": "Four Card Feature Section",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/four-card-feature-section-master/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
   </head>
   <body>
     <h1>Frontendmentor.io Challenges</h1>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://hshs-dev.github.io/frontend-mentors-challenges-gallery/</loc>
+  </url>
+
+  <url>
+    <loc>https://hshs-dev.github.io/frontend-mentors-challenges-gallery/qr-code-component/</loc>
+  </url>
+
+  <url>
+    <loc>https://hshs-dev.github.io/frontend-mentors-challenges-gallery/blog-preview-card/</loc>
+  </url>
+
+  <url>
+    <loc>https://hshs-dev.github.io/frontend-mentors-challenges-gallery/social-links-profile-main/</loc>
+  </url>
+
+  <url>
+    <loc>https://hshs-dev.github.io/frontend-mentors-challenges-gallery/recipe-page-main/</loc>
+  </url>
+
+  <url>
+    <loc>https://hshs-dev.github.io/frontend-mentors-challenges-gallery/product-preview-card-component-main/</loc>
+  </url>
+
+  <url>
+    <loc>https://hshs-dev.github.io/frontend-mentors-challenges-gallery/four-card-feature-section-master/</loc>
+  </url>
+
+</urlset>

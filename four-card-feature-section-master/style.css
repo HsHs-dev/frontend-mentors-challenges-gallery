@@ -244,8 +244,8 @@ main {
   }
 }
 
-/* Mobile 375px */
-@media (max-width: 23.4375rem) {
+/* Mobile 440px */
+@media (max-width: 27.5rem) {
   main {
     display: flex;
     flex-direction: column;

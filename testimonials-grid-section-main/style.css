@@ -1,0 +1,390 @@
+/* Begin of CSS reset, credits: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Issue arised, browser defautl heading styling beat inheritance */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+/* End of CSS reset */
+
+
+/* General Rules */
+:root {
+  --color-white: hsl(300, 5%, 96%);
+  --color-purple-50: hsl(260, 100%, 95%);
+  --color-purple-300: hsl(264, 82%, 80%);
+  --color-purple-500: hsl(263, 55%, 52%);
+  --color-grey-100: hsl(214, 17%, 92%);
+  --color-grey-200: hsl(0, 0%, 81%);
+  --color-grey-300: hsl(215, 10%, 67%);
+  --color-grey-400: hsl(224, 10%, 45%);
+  --color-grey-500: hsl(217, 19%, 35%);
+  --color-dark-blue: hsl(219, 29%, 14%);
+  --color-black: hsl(0, 0%, 7%);
+
+  --font-family: "Barlow Semi Condensed", sans-serif;
+  --font-size-body: 0.8125rem;
+
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+}
+
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: clamp(1rem, 5vw, 2rem);
+  font-size: var(--font-size-body);
+  font-family: var(--font-family);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* main section styling */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Card Styling */
+
+.card {
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 1px 20px 50px -25px var(--color-grey-500);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.1;
+}
+
+header .name {
+  font-size: 0.8125rem;
+  margin-bottom: 0.25rem;
+}
+
+header .title {
+  font-size: 0.6875rem;
+}
+
+header img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+
+blockquote .summary {
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+blockquote .comment {
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+}
+
+.comment {
+  quotes: "“" "”";
+}
+
+.comment::before {
+  content: open-quote;
+}
+
+.comment::after {
+  content: close-quote;
+}
+
+
+/* Individual Cards Styling */
+
+.daniel {
+  background-color: var(--color-purple-500);
+
+  header img {
+    border: 3px solid var(--color-purple-300);
+  }
+
+  header .name {
+    color: var(--color-white);
+  }
+
+  header .title {
+    color: var(--color-purple-50);
+  }
+
+  blockquote .summary {
+    color: var(--color-white);
+  }
+
+  blockquote .comment {
+    color: var(--color-purple-50);
+  }
+}
+
+.jonathan {
+  background-color: var(--color-grey-500);
+
+  header .name {
+    color: var(--color-white);
+  }
+
+  header .title {
+    color: var(--color-grey-300);
+  }
+
+  blockquote .summary {
+    color: var(--color-white);
+  }
+
+  blockquote .comment {
+    color: var(--color-grey-100);
+  }
+}
+
+.jeanette {
+  background-color: var(--color-white);
+
+  header .name {
+    color: var(--color-grey-500);
+  }
+
+  header .title {
+    color: var(--color-grey-400);
+  }
+
+  blockquote .summary {
+    color: var(--color-grey-500);
+  }
+
+  blockquote .comment {
+    color: var(--color-grey-400);
+  }
+}
+
+.patrick {
+  background-color: var(--color-dark-blue);
+
+  header img {
+    border: 3px solid var(--color-purple-500);
+  }
+
+  header .name {
+    color: var(--color-white);
+  }
+
+  header .title {
+    color: var(--color-white);
+  }
+
+  blockquote .summary {
+    color: var(--color-grey-200);
+  }
+
+  blockquote .comment {
+    color: var(--color-grey-100);
+  }
+
+}
+
+.kira {
+  background-color: var(--color-white);
+
+  header .name {
+    color: var(--color-grey-500);
+  }
+
+  header .title {
+    color: var(--color-grey-300);
+  }
+
+  blockquote .summary {
+    color: var(--color-grey-500);
+  }
+
+  blockquote .comment {
+    color: var(--color-grey-400);
+  }
+
+}
+
+/* Media Queries */
+
+@media (min-width: 40rem) {
+
+  main {
+    max-width: 40.4375rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+      "daniel daniel"
+      "jonathan jeanette"
+      "patrick patrick"
+      "kira kira";
+  }
+
+  .daniel {
+    grid-area: daniel;
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 10%;
+  }
+
+  .jonathan {
+    grid-area: jonathan;
+  }
+
+  .jeanette {
+    grid-area: jeanette;
+  }
+
+  .patrick {
+    grid-area: patrick;
+  }
+
+  .kira {
+    grid-area: kira;
+  }
+
+}
+
+@media (min-width: 64rem) {
+  main {
+    max-width: 69.625rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+  }
+
+  .daniel {
+    grid-area: daniel;
+  }
+
+  .jonathan {
+    grid-area: jonathan;
+  }
+
+  .kira {
+    grid-area: kira;
+  }
+
+  .patrick {
+    grid-area: patrick;
+  }
+
+  .jeanette {
+    grid-area: jeanette;
+  }
+
+}

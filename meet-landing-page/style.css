@@ -1,0 +1,463 @@
+/* Begin of CSS reset, credits: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Issue arised, browser defautl heading styling beat inheritance */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+/* End of CSS reset */
+
+
+/* General Rules */
+:root {
+  --cyan-600: #4d96a9;
+  --cyan-300: #8fe3f9;
+  --purple-600: #855fb1;
+  --purple-300: #d9b8ff;
+  --slate-900: #28283d;
+  --slate-600: #87879d;
+  --slate-300: #d1d1df;
+  --white: #fafafa;
+
+  --font-family: "Red Hat Display", sans-serif;
+  --font-weight-medium: 500;
+  --font-weight-black: 900;
+
+  --timeline-height: 5rem;
+}
+
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  font-family: var(--font-family);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 34rem;
+}
+
+.text-content h2 {
+  color: var(--slate-900);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: var(--font-weight-black);
+  line-height: 1.1;
+}
+
+.text-content p {
+  color: var(--slate-600);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+}
+
+.timeline-node {
+  aspect-ratio: 1 / 1;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--slate-600);
+  font-size: 1rem;
+  font-weight: var(--font-weight-black);
+  line-height: 1.5;
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid var(--slate-300);
+  border-radius: 50%;
+  margin-top: var(--timeline-height);
+}
+
+.timeline-node::before {
+  position: absolute;
+  content: "";
+  height: var(--timeline-height);
+  width: 1px;
+  background-color: var(--slate-300);
+  top: 0;
+  left: 50%;
+  transform: translateY(-100%);
+}
+
+/* nav section start */
+
+nav {
+  padding-top: 3rem;
+  padding-inline: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* nav section end */
+
+/* header section start */
+
+header {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .hero-image {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  gap: 1.5rem;
+}
+
+header .hero-image .left {
+  max-width: 13rem;
+}
+
+header .hero-image .right {
+  max-width: 13rem;
+}
+
+header .text-content .action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .action button {
+  padding-block: 1rem;
+  padding-inline: 2.5rem;
+  border-radius: 1.8125rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-black);
+  line-height: 1.5;
+  color: var(--white);
+  border: none;
+}
+
+header .action .download {
+  background-color: var(--cyan-600);
+
+  span {
+    color: var(--cyan-300);
+    margin-left: 0.25rem;
+  }
+
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+header .action .download:hover {
+  background-color: #71C0D4;
+}
+
+header .action .what-is-it {
+  background-color: var(--purple-600);
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+header .action .what-is-it:hover {
+  background-color: #B18BDD;
+}
+
+/* header section end */
+
+/* main section start */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  margin-bottom: 4rem;
+}
+
+main .main-image {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  gap: 1rem;
+  margin: 4rem 0;
+}
+
+main .main-image img {
+  border-radius: 1rem;
+}
+
+main .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .title p {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--cyan-600);
+  font-size: 1rem;
+  font-weight: var(--font-weight-black);
+  line-height: 1.1;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+main .text-content {
+  margin-bottom: 4rem;
+}
+
+/* main section end */
+
+/* footer section start */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(#5697a8e0, #5697a8e0),
+    url("./assets/mobile/image-footer.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+footer .text-content {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+footer .text-content h2 {
+  color: var(--white);
+}
+
+footer .text-content p {
+  color: var(--white);
+}
+
+footer .timeline-node {
+  background-color: var(--white);
+  margin-top: 2rem;
+  transform: translateY(-105%);
+}
+
+footer button {
+  background-color: var(--purple-600);
+  padding-block: 1rem;
+  padding-inline: 2.5rem;
+  border-radius: 1.8125rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-black);
+  line-height: 1.5;
+  color: var(--white);
+  border: none;
+  margin-bottom: 4rem;
+
+  span {
+    color: var(--purple-300);
+    margin-left: 0.25rem;
+  }
+
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: #B18BDD;
+}
+
+/* footer section end */
+
+
+/* Media Queries */
+
+@media (min-width: 40rem) {
+
+  footer {
+    background-image: linear-gradient(#5697a8e0, #5697a8e0),
+      url("./assets/tablet/image-footer.jpg");
+  }
+
+  header .hero-image {
+    gap: 2rem;
+
+    .left {
+      max-width: 24.625rem;
+    }
+
+    .right {
+      max-width: 24.625rem;
+    }
+  }
+
+  .text-content h2 {
+    font-size: 3rem;
+  }
+
+  header .text-content .action {
+    flex-direction: row;
+  }
+
+  main .main-image {
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+  }
+
+  main .title {
+    max-width: 27.8125rem;
+  }
+
+  footer .text-content {
+    max-width: 48rem;
+  }
+
+}
+
+@media (min-width: 66.5rem) {
+
+  footer {
+    background-image: linear-gradient(#5697a8e0, #5697a8e0),
+      url("./assets/desktop/image-footer.jpg");
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 34rem) 1fr;
+    align-items: center;
+  }
+
+  header .hero-image {
+    display: contents;
+  }
+
+  header .left {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  header .text-content {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  header .right {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .text-content h2 {
+    font-size: 4rem;
+  }
+
+  .text-content p {
+    font-size: 1.125rem;
+  }
+
+  main .text-content,
+  footer .text-content {
+    max-width: none;
+  }
+
+  main .title {
+    max-width: 64rem;
+  }
+}

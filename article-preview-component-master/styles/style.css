@@ -1,0 +1,252 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey-900: hsl(217, 19%, 35%);
+  --color-grey-500: hsl(214, 17%, 51%);
+  --color-grey-400: hsl(212, 23%, 69%);
+  --color-grey-200: hsl(210, 46%, 95%);
+  --font-family: "Manrope", sans-serif;
+  --font-size-body: 0.8125rem;
+  --font-weight-medium: 500;
+  --font-weight-bold: 900;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-grey-200);
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  padding: 1.5rem;
+}
+
+.card {
+  max-width: 45.625rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--color-white);
+  box-shadow: 0px 40px 40px -10px #C9D5E1;
+  border-radius: 0.625rem;
+}
+
+.card-image img {
+  border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1.875rem;
+}
+
+.card .text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .details {
+    font-size: 0.8125rem;
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    letter-spacing: 0.12%;
+    color: var(--color-grey-500);
+  }
+
+  .description {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.3;
+    letter-spacing: 0.25px;
+    color: var(--color-grey-900);
+  }
+
+}
+
+.card .avatar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 0.625rem 0.625rem;
+  padding-inline: 1.875rem;
+  padding-block: 1.1rem;
+  gap: 4rem;
+}
+
+.card .avatar .avatar-info {
+  display: flex;
+  gap: 1rem;
+  visibility: visible;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+
+
+  .avatar-image {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .avatar-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .avatar-details {
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    letter-spacing: 0.12%;
+
+    .name {
+      font-weight: var(--font-weight-bold);
+      color: var(--color-grey-900);
+    }
+
+    .date {
+      font-weight: var(--font-weight-medium);
+      color: var(--color-grey-400);
+    }
+  }
+}
+
+
+.avatar button {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-grey-200);
+  color: var(--color-grey-500);
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+.avatar button:hover {
+  color: var(--color-white);
+  background-color: var(--color-grey-500);
+}
+
+.share {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.share p {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  letter-spacing: 25%;
+  color: var(--color-grey-400);
+}
+
+.share .socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.share.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card .avatar .avatar-info.visible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.card .avatar.visible {
+  background-color: var(--color-grey-900);
+}
+
+.card .avatar button.visible {
+  color: var(--color-white);
+  background-color: var(--color-grey-500);
+}
+
+/* Media Quereis */
+
+@media (min-width: 40rem) {
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "card-image card-content"
+      "card-image avatar";
+  }
+
+  .card-image {
+    grid-area: card-image;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem 0 0 0.625rem;
+  }
+
+  .card-content {
+    grid-area: card-content;
+    margin-top: 2rem;
+  }
+
+  .avatar {
+    grid-area: avatar;
+    margin-bottom: 2rem;
+  }
+
+  /* Keep the avatar section's background unchanged */
+  .card .avatar.visible {
+    background-color: transparent;
+  }
+
+  .card .avatar .avatar-info.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  .share {
+    width: max-content;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    left: 55%;
+    top: -70%;
+    background-color: var(--color-grey-900);
+    border-radius: 1rem;
+  }
+
+  .share::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--color-grey-900) transparent transparent transparent;
+  }
+
+
+}

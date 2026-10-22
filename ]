@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Basic SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Mentor Challenges Gallery</title>
+
+    <meta
+      name="description"
+      content="A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript."
+    />
+
+    <meta name="author" content="Hassan" />
+
+    <link
+      rel="canonical"
+      href="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/"
+    />
+
+    <!-- Crawling / indexing -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Google Search Console -->
+    <meta
+      name="google-site-verification"
+      content="WT-BVpRYOQl_eDLcgLP6bUjwNSveT-SWrjxGq2roWMA"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Frontend Mentor Challenges Gallery" />
+
+    <meta
+      property="og:description"
+      content="A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:url"
+      content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/"
+    />
+
+    <meta
+      property="og:site_name"
+      content="Frontend Mentor Challenges Gallery"
+    />
+
+    <meta property="og:locale" content="en_US" />
+
+    <meta
+      property="og:image"
+      content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png"
+    />
+
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta
+      property="og:image:alt"
+      content="Frontend Mentor Challenges Gallery"
+    />
+
+    <!-- X -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:title" content="Frontend Mentor Challenges Gallery" />
+
+    <meta
+      name="twitter:description"
+      content="A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png"
+    />
+
+    <meta
+      name="twitter:image:alt"
+      content="Frontend Mentor Challenges Gallery"
+    />
+
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/#website",
+            "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/",
+            "name": "Frontend Mentor Challenges Gallery",
+            "description": "A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript.",
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/#collection",
+            "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/",
+            "name": "Frontend Mentor Challenges Gallery",
+            "description": "A gallery of completed Frontend Mentor challenges built with HTML, CSS, and JavaScript.",
+            "isPartOf": {
+              "@id": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/#website"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/og-image.png",
+              "width": 1200,
+              "height": 630
+            },
+            "mainEntity": {
+              "@type": "ItemList",
+              "numberOfItems": 6,
+              "itemListOrder": "https://schema.org/ItemListOrderAscending",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "QR Code Component",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/qr-code-component/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Blog Preview Card",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/blog-preview-card/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "Social Links Profile",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/social-links-profile-main/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 4,
+                  "name": "Recipe Page",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/recipe-page-main/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 5,
+                  "name": "Product Preview Card Component",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/product-preview-card-component-main/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 6,
+                  "name": "Four Card Feature Section",
+                  "url": "https://hshs-dev.github.io/frontend-mentors-challenges-gallery/four-card-feature-section-master/"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Frontend Mentor Challenges Gallery</h1>
+
+    <main class="gallery-grid">
+      <!-- Challenge Card 1 -->
+      <article class="card">
+        <a href="./qr-code-component/" class="card-media">
+          <img
+            src="./qr-code-component/preview.jpg"
+            alt="QR Code Preview"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./qr-code-component/" class="card-title"
+                >QR Code Component</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/qr-code-component"
+              aria-label="View QR Code Component source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>A responsive QR code card component.</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 2 -->
+      <article class="card">
+        <a href="./blog-preview-card/" class="card-media">
+          <img
+            src="./blog-preview-card/preview.jpg"
+            alt="Blog Preview Card Preview"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./blog-preview-card/" class="card-title"
+                >Blog Preview Card</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/blog-preview-card"
+              aria-label="View Blog Preview Card source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>A clean blog post preview card layout.</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 3 -->
+      <article class="card">
+        <a href="./social-links-profile-main/" class="card-media">
+          <img
+            src="./social-links-profile-main/preview.jpg"
+            alt="Social Links Card"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./social-links-profile-main/" class="card-title"
+                >Social Links Card Component</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/social-links-profile-main"
+              aria-label="View Social Links Card Component source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>Aesthetic Social Links Card view</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 4 -->
+      <article class="card">
+        <a href="./recipe-page-main/" class="card-media">
+          <img
+            src="./recipe-page-main/preview.jpg"
+            alt="Rcipe Page"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./recipe-page-main/" class="card-title"
+                >Recipe Page Card Component</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/recipe-page-main"
+              aria-label="View Recipe Page Card Component source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>Modern Recipe Page Card</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 5 -->
+      <article class="card">
+        <a href="./product-preview-card-component-main/" class="card-media">
+          <img
+            src="./product-preview-card-component-main/final.png"
+            alt="Product Preview Card"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a
+                href="./product-preview-card-component-main/"
+                class="card-title"
+                >Product Preview Card Component</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/product-preview-card-component-main"
+              aria-label="View Product Preview Card Component source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>Responsive Prodcut Preview</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 6 -->
+      <article class="card">
+        <a href="./four-card-feature-section-master/" class="card-media">
+          <img
+            src="./four-card-feature-section-master/Screenshot.png"
+            alt="Four Card Feature Section"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./four-card-feature-section-master/" class="card-title"
+                >Four Card Feature Section</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/four-card-feature-section-master"
+              aria-label="View Four Card Feature Section source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>nice looking and responsive grid layout</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 7 -->
+      <article class="card">
+        <a href="./testimonials-grid-section-main/" class="card-media">
+          <img
+            src="./testimonials-grid-section-main/Screenshot.png"
+            alt="Testimonials Grid Section"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./testimonials-grid-section-main/" class="card-title"
+                >Testimonials Grid Section</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/testimonials-grid-section-main"
+              aria-label="View Testimonials Grid Section source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>Adaptive Grid Section</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 8 -->
+      <article class="card">
+        <a href="./meet-landing-page/" class="card-media">
+          <img
+            src="./meet-landing-page/Screenshot.png"
+            alt="Meet Landing Page"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./meet-landing-page/" class="card-title"
+                >Meet Landing Page</a
+              >
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/meet-landing-page"
+              aria-label="View Meet Landing Page source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>Landing Page for Meet app</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 9 -->
+      <article class="card">
+        <a href="./article-preview-component-master/" class="card-media">
+          <img
+            src="./article-preview-component-master/Screenshot.png"
+            alt="Article Preview Component"
+            class="card-img"
+          />
+        </a>
+        <div class="card-body">
+          <div class="card-header">
+            <h2>
+              <a href="./article-preview-component-master/" class="card-title"
+                >Article Preview Component
+              </a>
+            </h2>
+            <a
+              class="repo-link"
+              href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/article-preview-component-master"
+              aria-label="View Article Preview Component source code on GitHub"
+            >
+              <svg
+                class="repo-icon"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                />
+              </svg>
+            </a>
+          </div>
+          <p>Article Preview Component Design</p>
+        </div>
+      </article>
+
+      <!-- Challenge Card 10 -->
+<article class="card">
+  <a
+    href="./newsletter-sign-up-with-success-message-master/"
+    class="card-media"
+  >
+    <img
+      src="./newsletter-sign-up-with-success-message-master/Screenshot.png"
+      alt="Newsletter Sign-up Form with Success Message"
+      class="card-img"
+    />
+  </a>
+  <div class="card-body">
+    <div class="card-header">
+      <h2>
+        <a
+          href="./newsletter-sign-up-with-success-message-master/"
+          class="card-title"
+        >
+          Newsletter Sign-up Form with Success Message
+        </a>
+      </h2>
+      <a
+        class="repo-link"
+        href="https://github.com/HsHs-dev/frontend-mentors-challenges-gallery/tree/main/newsletter-sign-up-with-success-message-master"
+        aria-label="View Newsletter Sign-up Form with Success Message source code on GitHub"
+      >
+        <svg
+          class="repo-icon"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+
+    </main>
+  </body>
+</html>

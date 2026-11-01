@@ -8,7 +8,7 @@ A solution to the [Time Tracking Dashboard](https://www.frontendmentor.io/challe
 
 ## Design Preview
 
-![Design preview for the Time Tracking Dashboard challenge](./Screenshot.jpg)
+![Design preview for the Time Tracking Dashboard challenge](./Screenshot.png)
 
 ## Built with
 
